@@ -107,7 +107,7 @@ class TagContainer extends React.Component<Props> {
         onDoubleClick={event => { if (this.props.handleTagMenu) { this.props.handleTagMenu(event, tag, entryPath || tagGroup); } }}
         style={{
           backgroundColor: 'transparent',
-          marginLeft: 0,
+          marginLeft: 2,
           marginTop: 0,
           marginBottom: 0,
           display: 'inline-block'
