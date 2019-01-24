@@ -744,11 +744,11 @@ class GridPerspective extends React.Component<Props, State> {
       );
     } else if (this.state.layoutType === 'row') {
       return (
-        <Grid container wrap="nowrap" spacing={16}>
+        <Grid container wrap="nowrap" spacing={0}>
           <Grid
             item
             style={{
-              padding: 10
+              padding: 0
             }}
           >
             {fsEntry.isFile ? (
@@ -771,35 +771,12 @@ class GridPerspective extends React.Component<Props, State> {
           <Grid item xs zeroMinWidth>
             <Typography
               style={{
-                padding: 5
+                padding: 0
               }}
             >
               {extractTitle(fsEntry.name, !fsEntry.isFile)}
             </Typography>
             {fsEntry.tags.map(tag => this.renderTag(tag, fsEntry))}
-            <Typography
-              // noWrap
-              style={{
-                color: 'gray',
-                padding: 5
-              }}
-            >
-              <span title={fsEntry.size + ' ' + i18n.t('core:sizeInBytes')}>
-                {fsEntry.isFile && formatFileSize(fsEntry.size) + ' - '}
-              </span>
-              <span
-                title={
-                  i18n.t('core:modifiedDate') +
-                  ': ' +
-                  formatDateTime(fsEntry.lmdt, true)
-                }
-              >
-                {fsEntry.isFile && fsEntry.lmdt && '️ ' + moment(fsEntry.lmdt).fromNow() + ' '}
-              </span>
-              <span title={i18n.t('core:entryDescription')}>
-                {description && description }
-              </span>
-            </Typography>
           </Grid>
           {fsEntry.thumbPath && (
             <Grid
@@ -815,9 +792,9 @@ class GridPerspective extends React.Component<Props, State> {
                 style={{
                   backgroundSize: this.state.thumbnailMode,
                   backgroundImage: thumbPathUrl,
-                  margin: 5,
-                  height: 85,
-                  width: 85
+                  margin: 0,
+                  height: 50,
+                  width: 50
                 }}
               />
             </Grid>

@@ -90,6 +90,9 @@ class TagContainer extends React.Component<Props> {
           style={{
             color: 'white'
           }}
+          style={{
+            fontSize: 12,
+          }}
         />
       );
     }
@@ -104,9 +107,9 @@ class TagContainer extends React.Component<Props> {
         onDoubleClick={event => { if (this.props.handleTagMenu) { this.props.handleTagMenu(event, tag, entryPath || tagGroup); } }}
         style={{
           backgroundColor: 'transparent',
-          marginLeft: 4,
+          marginLeft: 0,
           marginTop: 0,
-          marginBottom: 4,
+          marginBottom: 0,
           display: 'inline-block'
         }}
       >
@@ -114,15 +117,15 @@ class TagContainer extends React.Component<Props> {
           size="small"
           style={{
             opacity: isDragging ? 0.5 : 1,
-            fontSize: 13,
+            fontSize: 12,
             textTransform: 'none',
             color: textColor,
             backgroundColor,
-            minHeight: 25,
+            minHeight: 0,
             margin: 0,
             paddingTop: 0,
             paddingBottom: 0,
-            paddingRight: 3,
+            paddingRight: 0,
             borderRadius: 5
           }}
         >
