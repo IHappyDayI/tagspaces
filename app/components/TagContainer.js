@@ -122,6 +122,7 @@ class TagContainer extends React.Component<Props> {
             color: textColor,
             backgroundColor,
             minHeight: 0,
+            minWidth: 0,
             margin: 0,
             paddingTop: 0,
             paddingBottom: 0,
