@@ -38,5 +38,6 @@
 				]
       ]
     }
-  }
+  },
+  "retainLines": true,
 }

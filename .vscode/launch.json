@@ -1,11 +1,16 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Launch Program",
-        "program": "${workspaceRoot}/app/"
-      }
-    ]
-  }
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "yarn dev",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": [
+        "dev"
+      ],
+      "port": 9222,
+      "cwd": "${workspaceRoot}",
+    },
+  ]
+}
